@@ -72,4 +72,4 @@ router.get('/transaction/edit/:transactionId', isLoggedIn, async (req, res) => {
     res.render('editTransaction', {item})
 })
 
-module.exports = router
+module.exports = router;
