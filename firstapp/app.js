@@ -1,3 +1,4 @@
+require('dotenv').config()
 const createError = require('http-errors');
 const express = require('express');
 const path = require('path');
@@ -14,7 +15,7 @@ const User = require('./models/User');
 /* **************************************** */
 /*  Connecting to a Mongo Database Server   */
 /* **************************************** */
-const mongodb_URI = "mongodb+srv://admin:admin@pa04.vnixqep.mongodb.net/?retryWrites=true&w=majority" || 'mongodb://127.0.0.1:27017/pwdemo';
+const mongodb_URI = process.env.mongodb_URI || 'mongodb+srv://admin:admin@pa04.vnixqep.mongodb.net/?retryWrites=true&w=majority';
 console.log('MONGODB_URI=',process.env.MONGODB_URI);
 
 const mongoose = require( 'mongoose' );
