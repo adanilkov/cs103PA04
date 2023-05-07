@@ -59,12 +59,12 @@ router.post('/transaction/put', isLoggedIn, async (req, res) => {
     await transaction.findOneAndUpdate(
         {_id:itemId},
         {$set: {description, amount, category, date}} );
-      res.redirect('/transaction')
+    res.redirect('/transaction')
 })
 //retrieve transaction and delete
 router.get('/transaction/remove/:transactionId', isLoggedIn, async (req, res) => {
     await transaction.deleteOne({_id:req.params.transactionId});
-      res.redirect('/transaction')
+    res.redirect('/transaction')
 })
 //edit transaction
 router.get('/transaction/edit/:transactionId', isLoggedIn, async (req, res) => {
