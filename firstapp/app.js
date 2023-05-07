@@ -15,7 +15,7 @@ const User = require('./models/User');
 /* **************************************** */
 /*  Connecting to a Mongo Database Server   */
 /* **************************************** */
-const mongodb_URI = process.env.mongodb_URI || 'mongodb+srv://admin:admin@pa04.vnixqep.mongodb.net/?retryWrites=true&w=majority';
+const mongodb_URI = process.env.MONGODB_URI || 'mongodb+srv://admin:admin@pa04.vnixqep.mongodb.net/?retryWrites=true&w=majority';
 console.log('MONGODB_URI=',process.env.MONGODB_URI);
 
 const mongoose = require( 'mongoose' );
